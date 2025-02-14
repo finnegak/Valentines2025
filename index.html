@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover-to-Reveal Love Card</title>
+    <script>
+        function navigateToPage(nextPage) {
+            window.location.href = nextPage; 
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffccd5;
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .hidden-message {
+            font-size: 24px;
+            color: #ff4d6d;
+            text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff99aa;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            padding:40px;
+        }
+        .hidden-message:hover {
+            opacity: 1;
+        }
+        #messages{
+            padding-top:60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div id="messages">
+            <div class="hidden-message" id="youAreLoved" onclick="navigateToPage('youAreLoved.html')">You are loved! ❤️</div>
+            <div class="hidden-message" id="ily" onclick="navigateToPage('ily.html')">I love you!</div>
+            <div class="hidden-message" id="pico" onclick="navigateToPage('pico.html')">Pico loves you</div>
+            <div class="hidden-message" id="wearPink" onclick="navigateToPage('wearPink.html')">On Galentine's Day, We Wear Pink</div>
+        </div>
+    </div>
+</body>
+</html>
